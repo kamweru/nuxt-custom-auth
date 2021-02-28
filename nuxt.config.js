@@ -64,7 +64,9 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL: 'https://nuxt-custom-auth.21yunbox.com', // Used as fallback if no runtime config is provided
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/

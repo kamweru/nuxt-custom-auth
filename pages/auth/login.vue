@@ -84,7 +84,7 @@ export default {
     async onLogin() {
       try {
         await this.onValidateUser() // Skip this part if you are doing real code to API
-        const { data } = await this.$axios.$get('/static/api/auth/login.json')
+        const { data } = await this.$axios.$get('/api/auth/login.json')
         await this.$store.commit('auth/SET_TOKEN', data.token.token)
         await this.$store.commit('auth/SET_USER', data.user)
         const { form } = this.$route.query
