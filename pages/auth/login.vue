@@ -100,7 +100,7 @@ export default {
     // onValidateUser function was created to replicate backend API user validation
     async onValidateUser() {
       try {
-        const { data } = await this.$axios.$get('/static/api/users/users.json')
+        const { data } = await this.$axios.$get('/api/users/users.json')
         if (
           data.find(
             (obj) =>

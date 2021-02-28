@@ -9,7 +9,7 @@ export const actions = {
     const token = this.$cookies.get('token')
     if (token) {
       try {
-        const { data } = await this.$axios.$get('/static/api/me/user.json')
+        const { data } = await this.$axios.$get('/api/me/user.json')
         await store.commit('auth/SET_TOKEN', token)
         await store.commit('auth/SET_USER', data.user)
       } catch (e) {
